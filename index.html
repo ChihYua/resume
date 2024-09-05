@@ -84,118 +84,155 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>賴致元的簡歷</title>
 <style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Microsoft YaHei', 'SimHei', 'STHeiti', sans-serif;
-    background-color: #f5e9e2;
-    color: #333;
-    line-height: 1.6;
-}
-.resume-container {
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-.header {
-    background-color: #e8d3c7;
-    padding: 30px;
-    text-align: center;
-    position: relative;
-}
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    margin-bottom: 15px;
-}
-.name {
-    font-size: 28px;
-    margin: 10px 0;
-    color: #4a4a4a;
-}
-.english-name {
-    font-size: 18px;
-    color: #666;
-    margin-top: 5px;
-}
-.contact-info {
-    font-size: 14px;
-    color: #666;
-    margin-top: 15px;
-}
-.main-content {
-    display: flex;
-    padding: 30px;
-}
-.left-column {
-    flex: 1;
-    padding-right: 20px;
-}
-.right-column {
-    flex: 2;
-}
-h2 {
-    color: #c17a74;
-    border-bottom: 2px solid #e8d3c7;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-h3 {
-    color: #4a4a4a;
-    margin-bottom: 5px;
-}
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-li {
-    margin-bottom: 10px;
-}
-.skill-bar {
-    background-color: #e8d3c7;
-    height: 10px;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-.skill-level {
-    background-color: #c17a74;
-    height: 100%;
-    border-radius: 5px;
-}
-.leaf-decoration {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    opacity: 0.2;
-}
-.leaf-top-left {
-    top: -20px;
-    left: -20px;
-    transform: rotate(-30deg);
-}
-.leaf-bottom-right {
-    bottom: -20px;
-    right: -20px;
-    transform: rotate(150deg);
-}
-.section {
-    margin-bottom: 20px;
-}
-.job-title, .education-item {
-    font-weight: bold;
-}
-.job-period, .education-period {
-    font-style: italic;
-    color: #666;
-}
-.job-conditions {
-    text-align: left;
-}
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Microsoft YaHei', 'SimHei', 'STHeiti', sans-serif;
+        background-color: #f5e9e2;
+        color: #333;
+        line-height: 1.6;
+    }
+    .resume-container {
+        max-width: 100%;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .header {
+        background-color: #e8d3c7;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        margin-bottom: 15px;
+    }
+    .name {
+        font-size: 28px;
+        margin: 10px 0;
+        color: #4a4a4a;
+    }
+    .english-name {
+        font-size: 18px;
+        color: #666;
+        margin-top: 5px;
+    }
+    .contact-info {
+        font-size: 14px;
+        color: #666;
+        margin-top: 15px;
+    }
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .left-column, .right-column {
+        flex: 1;
+        padding: 10px;
+    }
+    h2 {
+        color: #c17a74;
+        border-bottom: 2px solid #e8d3c7;
+        padding-bottom: 5px;
+        margin-top: 20px;
+    }
+    h3 {
+        color: #4a4a4a;
+        margin-bottom: 5px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .skill-bar {
+        background-color: #e8d3c7;
+        height: 10px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .skill-level {
+        background-color: #c17a74;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .leaf-decoration {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        opacity: 0.2;
+    }
+    .leaf-top-left {
+        top: -20px;
+        left: -20px;
+        transform: rotate(-30deg);
+    }
+    .leaf-bottom-right {
+        bottom: -20px;
+        right: -20px;
+        transform: rotate(150deg);
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .job-title, .education-item {
+        font-weight: bold;
+    }
+    .job-period, .education-period {
+        font-style: italic;
+        color: #666;
+    }
+    .job-conditions {
+        text-align: left;
+    }
+
+    @media (max-width: 768px) {
+        .main-content {
+            flex-direction: column;
+        }
+        .left-column, .right-column {
+            padding: 0;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+        }
+        .name {
+            font-size: 24px;
+        }
+        .english-name {
+            font-size: 16px;
+        }
+        .header {
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .name {
+            font-size: 20px;
+        }
+        .english-name {
+            font-size: 14px;
+        }
+        .header {
+            padding: 10px;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+        }
+    }
 </style>
 </head>
 <body>
